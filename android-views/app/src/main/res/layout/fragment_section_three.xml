@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 1. Casillas de verificación (Checkbox) -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Casillas de verificación"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Permiten seleccionar múltiples opciones. El estado indeterminado indica una selección parcial (ej. sub-elementos)."
+            android:layout_marginBottom="8dp"/>
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbNormal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Opción seleccionable" />
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbIndeterminate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Estado indeterminado"
+            app:checkedState="indeterminate"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- 2. Grupo de botones de opción (RadioGroup) -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Botones de opción (Radio Buttons)"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Opciones mutuamente excluyentes; solo se puede elegir una del grupo."
+            android:layout_marginBottom="8dp"/>
+        <RadioGroup
+            android:id="@+id/radioGroupOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+            <RadioButton
+                android:id="@+id/rbOption1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Opción A" />
+            <RadioButton
+                android:id="@+id/rbOption2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Opción B" />
+        </RadioGroup>
+
+        <!-- 3. Interruptor (Switch) -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Interruptor (Switch)"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Activa o desactiva un ajuste inmediatamente."
+            android:layout_marginBottom="8dp"/>
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switchFeature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Activar notificaciones"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- 4. Deslizadores (Sliders) -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deslizadores"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Permiten seleccionar un valor único o un rango de valores deslizando por una pista."
+            android:layout_marginBottom="8dp"/>
+        <com.google.android.material.slider.Slider
+            android:id="@+id/singleSlider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:valueFrom="0.0"
+            android:valueTo="100.0"
+            android:value="50.0" />
+        <com.google.android.material.slider.RangeSlider
+            android:id="@+id/rangeSlider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:valueFrom="0.0"
+            android:valueTo="100.0"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- 5. Lista desplegable (Spinner) -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lista desplegable"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Muestra opciones de selección en un menú compacto."
+            android:layout_marginBottom="8dp"/>
+        <Spinner
+            android:id="@+id/spinnerSelection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- 6. Selectores de Fecha y Hora -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selectores de Fecha y Hora"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lanzan un diálogo nativo para elegir el tiempo con precisión."
+            android:layout_marginBottom="8dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDatePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Elegir Fecha"
+                android:layout_marginEnd="16dp"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTimePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Elegir Hora" />
+        </LinearLayout>
+
+        <!-- 7. Chips de filtro -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chips de filtro seleccionables"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Componentes compactos útiles para aplicar múltiples filtros."
+            android:layout_marginBottom="8dp"/>
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp">
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Películas" />
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Series" />
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Documentales" />
+        </com.google.android.material.chip.ChipGroup>
+    </LinearLayout>
+</ScrollView>
