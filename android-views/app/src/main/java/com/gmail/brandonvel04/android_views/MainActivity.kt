@@ -45,6 +45,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_sec3 -> Section3Fragment()
                 R.id.nav_sec4 -> Section4Fragment()
                 R.id.nav_sec5 -> Section5Fragment()
+                R.id.nav_sec6 -> Section6Fragment()
                 else -> HomeFragment()
             }
 
