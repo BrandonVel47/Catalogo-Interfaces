@@ -50,6 +50,11 @@ fun AppNavigation() {
                     selected = false,
                     onClick = { navController.navigate("sec3"); scope.launch { drawerState.close() } }
                 )
+                NavigationDrawerItem(
+                    label = { Text("4. Listas y colecciones") },
+                    selected = false,
+                    onClick = { navController.navigate("sec4"); scope.launch { drawerState.close() } }
+                )
             }
         }
     ) {
@@ -79,6 +84,7 @@ fun AppNavigation() {
                 composable("sec1") { Section1Screen() }
                 composable("sec2") { Section2Screen() }
                 composable("sec3") { Section3Screen() }
+                composable("sec4") { Section4Screen() }
             }
         }
     }
