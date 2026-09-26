@@ -99,6 +99,14 @@ class AppDrawer extends StatelessWidget {
                 MaterialPageRoute(builder: (_) => const Section5Screen())
             ),
           ),
+          ListTile(
+            leading: const Icon(Icons.dashboard_outlined),
+            title: const Text('6. Contenedores y estructura'),
+            onTap: () => Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (_) => const Section6Screen())
+            ),
+          ),
         ],
       ),
     );
