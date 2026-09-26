@@ -41,6 +41,7 @@ class MainActivity : AppCompatActivity() {
             val fragment = when (menuItem.itemId) {
                 R.id.nav_home -> HomeFragment()
                 R.id.nav_sec1 -> Section1Fragment()
+                R.id.nav_sec2 -> Section2Fragment()
                 else -> HomeFragment()
             }
 

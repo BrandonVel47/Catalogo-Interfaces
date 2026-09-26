@@ -2,5 +2,5 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/nav_home" android:title="Pantalla Principal" />
     <item android:id="@+id/nav_sec1" android:title="1. Entrada de texto" />
-    <!-- Iremos agregando las secciones 2 a la 6 aquí -->
+    <item android:id="@+id/nav_sec2" android:title="2. Botones y acciones" />
 </menu>
