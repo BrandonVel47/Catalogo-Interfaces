@@ -55,6 +55,11 @@ fun AppNavigation() {
                     selected = false,
                     onClick = { navController.navigate("sec4"); scope.launch { drawerState.close() } }
                 )
+                NavigationDrawerItem(
+                    label = { Text("5. Información y retroalimentación") },
+                    selected = false,
+                    onClick = { navController.navigate("sec5"); scope.launch { drawerState.close() } }
+                )
             }
         }
     ) {
@@ -85,6 +90,7 @@ fun AppNavigation() {
                 composable("sec2") { Section2Screen() }
                 composable("sec3") { Section3Screen() }
                 composable("sec4") { Section4Screen() }
+                composable("sec5") { Section5Screen() }
             }
         }
     }
