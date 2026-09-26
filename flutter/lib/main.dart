@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'screens/section1_screen.dart';
 import 'screens/section2_screen.dart';
+import 'screens/section3_screen.dart';
+import 'screens/section4_screen.dart';
+import 'screens/section5_screen.dart';
+import 'screens/section6_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -74,7 +78,14 @@ class AppDrawer extends StatelessWidget {
             title: const Text('2. Botones y acciones'),
             onTap: () => Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const Section2Screen())),
           ),
-
+          ListTile(
+            leading: const Icon(Icons.check_box),
+            title: const Text('3. Elementos de selección'),
+            onTap: () => Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (_) => const Section3Screen())
+            ),
+          ),
         ],
       ),
     );
