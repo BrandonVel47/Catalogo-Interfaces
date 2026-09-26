@@ -81,11 +81,17 @@ class AppDrawer extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.check_box),
             title: const Text('3. Elementos de selección'),
+            onTap: () => Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const Section3Screen())),
+          ),
+          ListTile(
+            leading: const Icon(Icons.format_list_bulleted),
+            title: const Text('4. Listas y colecciones'),
             onTap: () => Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (_) => const Section3Screen())
+                MaterialPageRoute(builder: (_) => const Section4Screen())
             ),
           ),
+          
         ],
       ),
     );
