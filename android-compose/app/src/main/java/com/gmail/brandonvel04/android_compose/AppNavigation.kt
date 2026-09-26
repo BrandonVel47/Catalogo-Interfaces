@@ -45,6 +45,11 @@ fun AppNavigation() {
                     selected = false,
                     onClick = { navController.navigate("sec2"); scope.launch { drawerState.close() } }
                 )
+                NavigationDrawerItem(
+                    label = { Text("3. Elementos de selección") },
+                    selected = false,
+                    onClick = { navController.navigate("sec3"); scope.launch { drawerState.close() } }
+                )
             }
         }
     ) {
@@ -72,7 +77,8 @@ fun AppNavigation() {
             ) {
                 composable("home") { HomeScreen() }
                 composable("sec1") { Section1Screen() }
-                composable("sec2") { Section2Screen() } // Agrega esta línea
+                composable("sec2") { Section2Screen() }
+                composable("sec3") { Section3Screen() }
             }
         }
     }
