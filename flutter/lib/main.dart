@@ -91,7 +91,14 @@ class AppDrawer extends StatelessWidget {
                 MaterialPageRoute(builder: (_) => const Section4Screen())
             ),
           ),
-          
+          ListTile(
+            leading: const Icon(Icons.info_outline),
+            title: const Text('5. Información y retroalimentación'),
+            onTap: () => Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (_) => const Section5Screen())
+            ),
+          ),
         ],
       ),
     );
